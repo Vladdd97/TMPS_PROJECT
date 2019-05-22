@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OrganiserApp</string>
+    <string name="welcomeMessage">Welcome to Organaizer App</string>
+    <string name="addEventButton">Add Event</string>
+    <string name="selectedDate">You have selected :</string>
+    <string name="saveButton">Save</string>
+    <string name="titleOfEvent">Enter event title</string>
+    <string name="descriptionOfEvent">Write description of the event</string>
+    <string name="timeButton">Choose Time</string>
+    <string name="timeTextView">00:00</string>
+    <string name="showEventsButton">ShowEvents</string>
+    <string name="backButton">Back</string>
+    <string name="eventTextView">You have an event at this time !</string>
+    <string name="isAlarmSetTextView">isAlarmSet</string>
+    <string name="popUpTextView">Event Info</string>
+    <string name="modifyButton">Modify</string>
+    <string name="deleteButton">Delete</string>
+    <string name="modifyDateButton">Change Date</string>
+</resources>

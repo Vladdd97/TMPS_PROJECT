@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyEventActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/titleOfEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="@string/titleOfEvent"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/descriptionOfEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/descriptionOfEvent"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/titleOfEvent"
+        app:layout_constraintTop_toBottomOf="@+id/titleOfEvent" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="60dp"
+        android:background="@color/saveButtonColor"
+        android:onClick="onClick_saveButton"
+        android:text="@string/saveButton"
+        android:textColor="@color/buttonTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButton" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:background="@color/deleteButtonColor"
+        android:onClick="onClick_backButton"
+        android:text="@string/backButton"
+        android:textColor="@color/buttonTextColor"
+        app:layout_constraintBottom_toBottomOf="@+id/saveButton"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/saveButton" />
+
+    <Button
+        android:id="@+id/chooseTimeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:background="@color/chooseTimeButton"
+        android:onClick="onClick_chooseTimeButton"
+        android:padding="5dp"
+        android:text="@string/timeButton"
+        android:textColor="@color/buttonTextColor"
+        app:layout_constraintStart_toStartOf="@+id/modifyDateButton"
+        app:layout_constraintTop_toBottomOf="@+id/modifyDateButton" />
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/timeTextView"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/isAlarmSetTextView"
+        app:layout_constraintStart_toEndOf="@+id/chooseTimeButton" />
+
+    <Switch
+        android:id="@+id/isAlarmSetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/isAlarmSetTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseTimeButton" />
+
+    <Button
+        android:id="@+id/modifyDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:background="@color/chooseTimeButton"
+        android:onClick="onClick_chooseDateButton"
+        android:padding="5dp"
+        android:text="@string/modifyDateButton"
+        android:textColor="@color/buttonTextColor"
+        app:layout_constraintStart_toStartOf="@+id/descriptionOfEvent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionOfEvent" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="8dp"
+        android:text="dateTextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/modifyDateButton"
+        app:layout_constraintStart_toEndOf="@+id/modifyDateButton" />
+</android.support.constraint.ConstraintLayout>
