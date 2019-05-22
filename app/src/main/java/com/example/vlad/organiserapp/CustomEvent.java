@@ -11,7 +11,7 @@ public class CustomEvent {
     private int isAlarmSet;
     // need to replace Date with Calendar
     private Date date;
-    
+
 
     private CustomEvent(CustomEventBuilder customEventBuilder) {
         this.id = customEventBuilder.id;
@@ -74,8 +74,17 @@ public class CustomEvent {
                 '}';
     }
 
-
-
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return new CustomEvent
+                .CustomEventBuilder()
+                .setId(id)
+                .setTitle(title)
+                .setDescription(description)
+                .setIsAlarmSet(isAlarmSet)
+                .setDate(date)
+                .build();
+    }
 
     //Builder Class
     public static class CustomEventBuilder {
