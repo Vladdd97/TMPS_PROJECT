@@ -3,7 +3,7 @@ package com.example.vlad.organiserapp;
 import java.util.Date;
 
 
-public class CustomEvent {
+public class CustomEvent implements Event{
 
     private int id;
     private String title;
@@ -21,47 +21,61 @@ public class CustomEvent {
         this.date = customEventBuilder.date;
     }
 
+    @Override
     public int getId() {
 
         return id;
     }
 
+    @Override
     public void setId(int id) {
         this.id = id;
     }
 
+    @Override
     public String getTitle() {
         return title;
     }
 
+    @Override
     public void setTitle(String title) {
         this.title = title;
     }
 
+    @Override
     public String getDescription() {
         return description;
     }
 
+    @Override
     public void setDescription(String description) {
         this.description = description;
     }
 
+    @Override
     public int getIsAlarmSet() {
         return isAlarmSet;
     }
 
+    @Override
     public void setIsAlarmSet(int isAlarmSet) {
         this.isAlarmSet = isAlarmSet;
     }
 
+    @Override
     public Date getDate() {
         return date;
     }
 
+    @Override
     public void setDate(Date date) {
         this.date = date;
     }
 
+    @Override
+    public boolean isNull() {
+        return false;
+    }
 
     @Override
     public String toString() {
