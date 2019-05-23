@@ -76,7 +76,7 @@ public class CustomEvent {
 
     // Prototype Design Pattern
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public CustomEvent clone() {
         return new CustomEvent
                 .CustomEventBuilder()
                 .setId(id)

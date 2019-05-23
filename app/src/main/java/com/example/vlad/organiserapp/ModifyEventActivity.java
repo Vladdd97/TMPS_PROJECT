@@ -17,6 +17,7 @@ import android.widget.TimePicker;
 
 import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
 import com.example.vlad.organiserapp.adapter.TargetInterface;
+import com.example.vlad.organiserapp.flyweight.CustomEventFactory;
 
 import java.util.Calendar;
 
@@ -51,7 +52,8 @@ public class ModifyEventActivity extends AppCompatActivity implements TimePicker
         fromActivity = getIntent();
         eventId = fromActivity.getExtras().getInt("eventId");
         // find customEvent
-        customEvent = targetInterface.adapterGetEventById(eventId);
+        customEvent = CustomEventFactory.getCustomEvent(eventId);
+                //targetInterface.adapterGetEventById(eventId);
         Log.d("Modifyactivity","Passed customEventObject : " + customEvent.toString());
 
         // set all TextInputs
