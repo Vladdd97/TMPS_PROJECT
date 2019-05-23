@@ -13,6 +13,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
+import com.example.vlad.organiserapp.adapter.TargetInterface;
+
 import java.util.Calendar;
 import java.util.Date;
 
@@ -33,11 +36,13 @@ public class AddEventActivity extends AppCompatActivity implements TimePickerDia
 
     private Date dateTimeOfEvent;
 
+    private TargetInterface targetInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
-
+        targetInterface = CustomEventXmlParserAdapter.getInstance();
         fromActivity = getIntent();
         dateOfEvent = fromActivity.getExtras().getString("dateOfEvent");
         selectedDate = findViewById(R.id.selectedDate);
@@ -82,18 +87,18 @@ public class AddEventActivity extends AppCompatActivity implements TimePickerDia
 
         customEvent = new CustomEvent.
                 CustomEventBuilder()
-                .setId(CustomEventXmlParser.getLastEventId() + 1)
+                .setId(targetInterface.adapterGetLastEventId() + 1)
                 .setTitle(titleOfEvent.getText().toString())
                 .setDescription(descriptionOfEvent.getText().toString())
                 .setIsAlarmSet(setAlarm)
                 .setDate(dateTimeOfEvent)
                 .build();
 
-        if ( CustomEventXmlParser.checkIfExists(CustomEventXmlParser.fileName)){
-            CustomEventXmlParser.addEventXml(customEvent);
+        if ( targetInterface.adapterCheckIfExists(CustomEventXmlParser.fileName)){
+            targetInterface.adapterAddEventXml(customEvent);
         }
         else{
-            CustomEventXmlParser.createAndWriteToXml(customEvent);
+            targetInterface.adapterCreateAndWriteToXml(customEvent);
         }
 
 
@@ -119,7 +124,7 @@ public class AddEventActivity extends AppCompatActivity implements TimePickerDia
         Intent setNotificationIntent = new Intent(getApplicationContext(),NotificationReceiver.class);
         //setNotificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         //need to be modified
-        setNotificationIntent.putExtra("eventId",CustomEventXmlParser.getLastEventId() + 1);
+        setNotificationIntent.putExtra("eventId",targetInterface.adapterGetLastEventId() + 1);
         setNotificationIntent.putExtra("title",titleOfEvent.getText().toString());
         setNotificationIntent.putExtra("description",descriptionOfEvent.getText().toString());
 

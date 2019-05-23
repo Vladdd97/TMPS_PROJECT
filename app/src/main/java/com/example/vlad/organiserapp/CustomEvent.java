@@ -74,6 +74,7 @@ public class CustomEvent {
                 '}';
     }
 
+    // Prototype Design Pattern
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return new CustomEvent
@@ -86,7 +87,7 @@ public class CustomEvent {
                 .build();
     }
 
-    //Builder Class
+    //Builder Design Pattern
     public static class CustomEventBuilder {
         private int id;
         private String title;

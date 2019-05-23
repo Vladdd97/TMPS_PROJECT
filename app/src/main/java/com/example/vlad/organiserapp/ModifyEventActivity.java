@@ -15,6 +15,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
+import com.example.vlad.organiserapp.adapter.TargetInterface;
+
 import java.util.Calendar;
 
 public class ModifyEventActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener , DatePickerDialog.OnDateSetListener {
@@ -28,10 +31,13 @@ public class ModifyEventActivity extends AppCompatActivity implements TimePicker
 
     private Intent fromActivity;
     int eventId;
+    private TargetInterface targetInterface;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modify_event);
+        targetInterface = CustomEventXmlParserAdapter.getInstance();
 
         // find all TextInputs
         descriptionOfEvent = findViewById(R.id.descriptionOfEvent);
@@ -45,7 +51,7 @@ public class ModifyEventActivity extends AppCompatActivity implements TimePicker
         fromActivity = getIntent();
         eventId = fromActivity.getExtras().getInt("eventId");
         // find customEvent
-        customEvent = CustomEventXmlParser.getEventById(eventId);
+        customEvent = targetInterface.adapterGetEventById(eventId);
         Log.d("Modifyactivity","Passed customEventObject : " + customEvent.toString());
 
         // set all TextInputs
@@ -104,7 +110,7 @@ public class ModifyEventActivity extends AppCompatActivity implements TimePicker
 
         customEvent.setTitle(titleOfEvent.getText().toString());
         customEvent.setDescription(descriptionOfEvent.getText().toString());
-        CustomEventXmlParser.modifyXml(customEvent);
+        targetInterface.adapterModifyXml(customEvent);
 
         finish();
     }

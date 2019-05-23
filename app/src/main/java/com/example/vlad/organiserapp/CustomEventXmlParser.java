@@ -13,12 +13,23 @@ import javax.xml.transform.stream.StreamResult;
 
 import java.io.File;
 
-
+// Singleton Design Pattern
 public class CustomEventXmlParser {
 
     public static String fileName = "events.xml";
 
-    public static void createAndWriteToXml(CustomEvent customEvent) {
+    private CustomEventXmlParser() {
+    }
+
+    private static class CustomEventXmlParserHelper {
+        private static final CustomEventXmlParser INSTANCE = new CustomEventXmlParser();
+    }
+
+    public static CustomEventXmlParser getInstance() {
+        return CustomEventXmlParserHelper.INSTANCE;
+    }
+
+    public void createAndWriteToXml(CustomEvent customEvent) {
 
         try {
             DocumentBuilderFactory dbFactory =
@@ -57,7 +68,7 @@ public class CustomEventXmlParser {
 
             // isAlarmSet element
             Element isAlarmSet = doc.createElement("isAlarmSet");
-            isAlarmSet.appendChild( doc.createTextNode(Integer.toString(customEvent.getIsAlarmSet())) );
+            isAlarmSet.appendChild(doc.createTextNode(Integer.toString(customEvent.getIsAlarmSet())));
             event.appendChild(isAlarmSet);
 
 
@@ -82,7 +93,7 @@ public class CustomEventXmlParser {
 
 
     // will modify an event base on modId
-    public static void modifyXml(CustomEvent customEvent) {
+    public void modifyXml(CustomEvent customEvent) {
 
         int modId = customEvent.getId();
 
@@ -123,7 +134,7 @@ public class CustomEventXmlParser {
                                 if ("description".equals(eElement.getNodeName()))
                                     eElement.setTextContent(customEvent.getDescription());
                                 // mod isAlarmSet
-                                if("isAlarmSet".equals(eElement.getNodeName()))
+                                if ("isAlarmSet".equals(eElement.getNodeName()))
                                     eElement.setTextContent(Integer.toString(customEvent.getIsAlarmSet()));
                                 // mod date element
                                 if ("date".equals(eElement.getNodeName()))
@@ -148,7 +159,7 @@ public class CustomEventXmlParser {
     }
 
 
-    public static void addEventXml(CustomEvent customEvent) {
+    public void addEventXml(CustomEvent customEvent) {
 
 
         try {
@@ -189,7 +200,7 @@ public class CustomEventXmlParser {
 
             // isAlarmSet element
             Element isAlarmSet = doc.createElement("isAlarmSet");
-            isAlarmSet.appendChild( doc.createTextNode(Integer.toString(customEvent.getIsAlarmSet())) );
+            isAlarmSet.appendChild(doc.createTextNode(Integer.toString(customEvent.getIsAlarmSet())));
             event.appendChild(isAlarmSet);
 
             // date element
@@ -211,7 +222,7 @@ public class CustomEventXmlParser {
 
     }
 
-    public static void deleteEvent(int deleteId) {
+    public void deleteEvent(int deleteId) {
 
 
         try {
@@ -257,7 +268,7 @@ public class CustomEventXmlParser {
     }
 
     // get Event by getId
-    public static CustomEvent getEventById (int getId){
+    public CustomEvent getEventById(int getId) {
 
         CustomEvent customEvent = new CustomEvent.
                 CustomEventBuilder()
@@ -309,7 +320,7 @@ public class CustomEventXmlParser {
                                     customEvent.setIsAlarmSet(Integer.parseInt(eElement.getTextContent()));
                                 // set date element
                                 if ("date".equals(eElement.getNodeName()))
-                                    customEvent.setDate(new Date( Long.parseLong(eElement.getTextContent()) ));
+                                    customEvent.setDate(new Date(Long.parseLong(eElement.getTextContent())));
                             }
                         }
                     }
@@ -321,13 +332,11 @@ public class CustomEventXmlParser {
         }
 
 
-
-
         return customEvent;
     }
 
 
-    public static ArrayList<CustomEvent> getcustomEvents() {
+    public ArrayList<CustomEvent> getcustomEvents() {
 
         ArrayList<CustomEvent> customEventList = new ArrayList<>();
 
@@ -346,7 +355,7 @@ public class CustomEventXmlParser {
                 if (event.getNodeType() == Node.ELEMENT_NODE) {
 
                     NodeList eventChilds = event.getChildNodes();
-                    CustomEvent customEventtt =  new CustomEvent.
+                    CustomEvent customEventtt = new CustomEvent.
                             CustomEventBuilder()
                             .setId(0)
                             .setTitle(null)
@@ -390,14 +399,14 @@ public class CustomEventXmlParser {
     }
 
 
-    public static boolean checkIfExists(String fileName) {
+    public boolean checkIfExists(String fileName) {
         File file = new File(fileName);
         boolean exists = file.exists();
         return exists;
     }
 
     // get eventId of the last event
-    public static int getLastEventId() {
+    public int getLastEventId() {
         int lastEventId = 0;
         if (!checkIfExists(CustomEventXmlParser.fileName)) {
             return lastEventId;

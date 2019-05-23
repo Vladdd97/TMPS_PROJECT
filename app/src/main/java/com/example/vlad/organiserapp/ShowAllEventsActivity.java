@@ -23,6 +23,9 @@ import android.widget.PopupWindow;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
+import com.example.vlad.organiserapp.adapter.TargetInterface;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -40,11 +43,13 @@ public class ShowAllEventsActivity extends AppCompatActivity {
     Button deleteButton;
     Button modifyButton;
     TextView popUpTextView;
+    private TargetInterface targetInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_events);
+        targetInterface = CustomEventXmlParserAdapter.getInstance();
 
         //get layout of activity_show_all_events
         showAllEventsConstraintLayout = (ConstraintLayout) findViewById(R.id.ShowAllEventsConstraintLayout);
@@ -70,7 +75,7 @@ public class ShowAllEventsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int id = v.getId() - deleteButtonIncreaseIndex;
-                CustomEventXmlParser.deleteEvent(id);
+                targetInterface.adapterDeleteEvent(id);
                 //parentLinearLayout.removeAllViews();
                 showAllEvents();
                 Log.d("ShowAllEventsLogger", "id :" + id);
@@ -96,7 +101,7 @@ public class ShowAllEventsActivity extends AppCompatActivity {
         if ( popupWindow != null)
             popupWindow.dismiss();
         // get array of objects
-        ArrayList<CustomEvent> customEventsArray = CustomEventXmlParser.getcustomEvents();
+        ArrayList<CustomEvent> customEventsArray = targetInterface.adapterGetCustomEvents();
         // get array of titles
         ArrayList<String> customEventTitles = new ArrayList<>();
 
