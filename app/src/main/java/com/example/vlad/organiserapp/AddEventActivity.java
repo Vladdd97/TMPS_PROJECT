@@ -16,7 +16,7 @@ import android.widget.TimePicker;
 import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
 import com.example.vlad.organiserapp.adapter.TargetInterface;
 import com.example.vlad.organiserapp.nullobject.CustomEvent;
-import com.example.vlad.organiserapp.strategy.StrategyImpl;
+import com.example.vlad.organiserapp.strategy.StrategyImpl1;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -97,7 +97,7 @@ public class AddEventActivity extends AppCompatActivity implements TimePickerDia
                 .build();
 
         if ( targetInterface.adapterCheckIfExists(CustomEventXmlParser.fileName)){
-            targetInterface.adapterAddEventXml(customEvent, new StrategyImpl());
+            targetInterface.adapterAddEventXml(customEvent, new StrategyImpl1());
         }
         else{
             targetInterface.adapterCreateAndWriteToXml(customEvent);

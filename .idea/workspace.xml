@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80ef124a-22ff-4b0e-9f01-ae138a67909e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollectionImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/javaCompile/classAnalysis.bin" afterDir="false" />
@@ -22,16 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/AddEventActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/AddEventActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/CustomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/CustomEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/CustomEventXmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/CustomEventXmlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ModifyEventActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ModifyEventActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ShowAllEventsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ShowAllEventsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ShowEventNotificationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ShowEventNotificationActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/adapter/CustomEventXmlParserAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/adapter/CustomEventXmlParserAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/adapter/TargetInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/adapter/TargetInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/flyweight/CustomEventFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/flyweight/CustomEventFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/NullEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/NullEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl1.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,46 +46,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ModifyEventActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/CustomEventXmlParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="281" column="30" selection-start-line="281" selection-start-column="30" selection-end-line="281" selection-end-column="30" />
-              <folding>
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#739#740#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/AddEventActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/CustomEvent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1492#1493#0" expanded="true" />
-                <element signature="e#1520#1521#0" expanded="true" />
-              </folding>
+              <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -108,16 +64,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -126,10 +73,57 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/CalendarActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/NotificationReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="-595">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/NullEvent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventIterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollectionImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,6 +193,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/adapter/CustomEventXmlParserAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/AddEventActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventsCollection.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventIterator.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollection.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollectionImpl.java" />
       </list>
     </option>
   </component>
@@ -244,14 +242,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="organiserapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OrganizerApp" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="organiserapp" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="strategy" type="462c0819:PsiDirectoryNode" />
+              <item name="iterator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OrganizerApp" type="1abcf292:AndroidViewProjectNode" />
@@ -460,28 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/NullEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/ShowAllEventsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -553,7 +522,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/AddEventActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="99" column="78" selection-start-line="99" selection-start-column="78" selection-end-line="99" selection-end-column="78" />
+          <caret line="99" column="79" selection-start-line="99" selection-start-column="79" selection-end-line="99" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -575,10 +544,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/strategy/StrategyImpl1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/NotificationReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-595">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/nullobject/NullEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vlad/organiserapp/iterator/EventCollectionImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

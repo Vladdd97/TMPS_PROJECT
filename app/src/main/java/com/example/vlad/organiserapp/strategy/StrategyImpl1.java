@@ -5,7 +5,7 @@ import android.util.Log;
 import com.example.vlad.organiserapp.CustomEventXmlParser;
 import com.example.vlad.organiserapp.nullobject.Event;
 
-public class StrategyImpl implements StrategyInterface {
+public class StrategyImpl1 implements StrategyInterface {
     private CustomEventXmlParser customEventXmlParser = CustomEventXmlParser.getInstance();
 
     @Override
