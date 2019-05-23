@@ -18,6 +18,7 @@ import android.widget.TimePicker;
 import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
 import com.example.vlad.organiserapp.adapter.TargetInterface;
 import com.example.vlad.organiserapp.flyweight.CustomEventFactory;
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
 
 import java.util.Calendar;
 

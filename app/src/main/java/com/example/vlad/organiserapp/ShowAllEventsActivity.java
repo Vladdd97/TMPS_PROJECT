@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.SearchView;
@@ -25,9 +24,9 @@ import android.widget.TextView;
 
 import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
 import com.example.vlad.organiserapp.adapter.TargetInterface;
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class ShowAllEventsActivity extends AppCompatActivity {
 
@@ -154,71 +153,6 @@ public class ShowAllEventsActivity extends AppCompatActivity {
                                                           " | eventId : " + eventId);
                                               }
                                           } );
-
-/*
-            // get parent Layout
-            parentLinearLayout =
-
-            findViewById(R.id.eventsLinearLayout);
-
-            ArrayList<CustomEvent> eventList;
-            eventList =CustomEventXmlParser.getcustomEvents();
-        for(
-            int i = 0; i<eventList.size();i++)
-
-            {
-
-                // create child LinearLayout for TextView
-                LinearLayout childTextViewLinearLayout = new LinearLayout(ShowAllEventsActivity.this);
-
-                // create new TextView
-                TextView newTextView = new TextView(ShowAllEventsActivity.this);
-                newTextView.setId(textViewIncreaseIndex + eventList.get(i).getId());
-                Date eventDate = eventList.get(i).getDate();
-                newTextView.setText("\n" + "" +
-                        "ID : " + eventList.get(i).getId() + "\n" +
-                        "Title : " + eventList.get(i).getTitle() + "\n" +
-                        "Description : " + eventList.get(i).getDescription() + "\n" +
-                        "isAlarmSet : " + eventList.get(i).getIsAlarmSet() + "\n" +
-                        "Date : " + eventDate.getDate() + "/" + eventDate.getMonth() + eventDate.getYear() + "\n" +
-                        "Time: " + eventDate.getHours() + ":" + eventDate.getMinutes());
-
-                // create child LinearLayout for Buttons
-                LinearLayout childButtonswLinearLayout = new LinearLayout(ShowAllEventsActivity.this);
-
-                // create modify button
-                Button modifyButton = new Button(ShowAllEventsActivity.this);
-                modifyButton.setId(modifyButtonIncreaseIndex + eventList.get(i).getId());
-                modifyButton.setText("Modify");
-                // style of button
-                modifyButton.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_light));
-                modifyButton.setTextColor(getResources().getColor(android.R.color.white));
-                // add OnClickListener to modify button
-                modifyButton.setOnClickListener(modifyButtonOnClickListener);
-
-                // create delete button
-                Button deleteButton = new Button(ShowAllEventsActivity.this);
-                deleteButton.setId(deleteButtonIncreaseIndex + eventList.get(i).getId());
-                deleteButton.setText("Delete");
-                // style of button
-                deleteButton.setBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
-                deleteButton.setTextColor(getResources().getColor(android.R.color.white));
-                // add OnClickListener to delete button
-                deleteButton.setOnClickListener(deleteButtonOnClickListener);
-
-                // add TextView to child LinearLayout for TextView
-                childTextViewLinearLayout.addView(newTextView);
-
-                // add Buttons to child LinearLayout for Buttons
-                childButtonswLinearLayout.addView(modifyButton);
-                childButtonswLinearLayout.addView(deleteButton);
-
-                // add childLinearLayouts to parent LinearLayout
-                parentLinearLayout.addView(childTextViewLinearLayout);
-                parentLinearLayout.addView(childButtonswLinearLayout);
-
-            }
-            */
 
         }
 

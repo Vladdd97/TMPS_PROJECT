@@ -1,7 +1,7 @@
 package com.example.vlad.organiserapp.flyweight;
 
 
-import com.example.vlad.organiserapp.CustomEvent;
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
 import com.example.vlad.organiserapp.adapter.CustomEventXmlParserAdapter;
 import com.example.vlad.organiserapp.adapter.TargetInterface;
 

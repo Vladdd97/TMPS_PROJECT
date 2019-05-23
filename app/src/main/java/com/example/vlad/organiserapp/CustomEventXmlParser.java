@@ -1,5 +1,8 @@
 package com.example.vlad.organiserapp;
 
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
+import com.example.vlad.organiserapp.nullobject.Event;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -29,7 +32,7 @@ public class CustomEventXmlParser {
         return CustomEventXmlParserHelper.INSTANCE;
     }
 
-    public void createAndWriteToXml(CustomEvent customEvent) {
+    public void createAndWriteToXml(Event customEvent) {
 
         try {
             DocumentBuilderFactory dbFactory =
@@ -93,7 +96,7 @@ public class CustomEventXmlParser {
 
 
     // will modify an event base on modId
-    public void modifyXml(CustomEvent customEvent) {
+    public void modifyXml(Event customEvent) {
 
         int modId = customEvent.getId();
 
@@ -159,7 +162,7 @@ public class CustomEventXmlParser {
     }
 
 
-    public void addEventXml(CustomEvent customEvent) {
+    public void addEventXml(Event customEvent) {
 
 
         try {

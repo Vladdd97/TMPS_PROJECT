@@ -1,4 +1,4 @@
-package com.example.vlad.organiserapp;
+package com.example.vlad.organiserapp.nullobject;
 
 import java.util.Date;
 

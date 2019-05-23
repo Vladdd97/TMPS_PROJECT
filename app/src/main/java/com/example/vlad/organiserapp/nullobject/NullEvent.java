@@ -1,7 +1,5 @@
 package com.example.vlad.organiserapp.nullobject;
 
-import com.example.vlad.organiserapp.Event;
-
 import java.util.Date;
 
 public class NullEvent implements Event {

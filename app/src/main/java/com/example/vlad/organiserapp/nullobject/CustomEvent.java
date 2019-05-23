@@ -1,9 +1,9 @@
-package com.example.vlad.organiserapp;
+package com.example.vlad.organiserapp.nullobject;
 
 import java.util.Date;
 
 
-public class CustomEvent implements Event{
+public class CustomEvent implements Event {
 
     private int id;
     private String title;

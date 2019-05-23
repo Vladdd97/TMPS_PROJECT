@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
+
 public class ShowEventNotificationActivity extends AppCompatActivity {
 
 

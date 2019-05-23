@@ -1,7 +1,9 @@
 package com.example.vlad.organiserapp.adapter;
 
-import com.example.vlad.organiserapp.CustomEvent;
+import com.example.vlad.organiserapp.nullobject.CustomEvent;
 import com.example.vlad.organiserapp.CustomEventXmlParser;
+import com.example.vlad.organiserapp.nullobject.Event;
+import com.example.vlad.organiserapp.strategy.StrategyInterface;
 
 import java.util.ArrayList;
 
@@ -23,18 +25,19 @@ public class CustomEventXmlParserAdapter implements TargetInterface {
     }
 
     @Override
-    public void adapterCreateAndWriteToXml(CustomEvent customEvent) {
+    public void adapterCreateAndWriteToXml(Event customEvent) {
         customEventXmlParser.createAndWriteToXml(customEvent);
     }
 
     @Override
-    public void adapterModifyXml(CustomEvent customEvent) {
+    public void adapterModifyXml(Event customEvent) {
         customEventXmlParser.modifyXml(customEvent);
     }
 
     @Override
-    public void adapterAddEventXml(CustomEvent customEvent) {
-        customEventXmlParser.addEventXml(customEvent);
+    public void adapterAddEventXml(Event customEvent, StrategyInterface strategyInterface) {
+        //customEventXmlParser.addEventXml(customEvent);
+        strategyInterface.save(customEvent);
     }
 
     @Override
